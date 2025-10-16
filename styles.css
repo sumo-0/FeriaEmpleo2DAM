@@ -1,14 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #16171b;
+  color: #eaeaea;
+  min-height: 100vh;
+}
+
+header {
+  background: #22232a;
+  padding: 32px 0 0 0;
+  border-bottom: 2px solid #2d2f36;
+  box-shadow: 0 2px 10px #18192160;
+}
+
+.navbar {
+  background: #23242e;
+  padding: 0 24px;
+  border-bottom: 2px solid #2d2f36;
+  border-radius: 0 0 12px 12px;
+}
+.navbar ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li a {
+  color: #eaeaea;
+  text-decoration: none;
+  padding: 11px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: block;
+  transition: background 0.12s, color 0.12s;
+}
+.navbar ul li a:hover {
+  background: #31323b;
+  color: #fff;
+}
+
+.divider {
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg,#2d2e36 0%, #494a5a 100%);
+  margin: 18px 0 28px 0;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+main {
+  padding: 28px 8vw 38px 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+section {
+  background: #202128;
+  border: 1.5px solid #292a33;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #23242e2f;
+  padding: 28px 22px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+h1, h2 {
+  color: #eaeaea;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+hr {
+  display: none;
+}
+
+button, .btn {
+  background: #22232a;
+  color: #eaeaea;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 12px #18192131;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s;
+  font-size: 1rem;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+button:hover, .btn:hover { 
+  background: #2d2f36;
+  color: #fff;
+}
+
 .youtube-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
 }
-
 .youtube-container iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;  
+  width: 100%;
   height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #23242e3a;
+  border: 1px solid #22232a;
 }
+
+footer {
+  padding: 14px 0;
+  text-align: center;
+  background: #212126;
+  color: #888;
+  font-size: .93rem;
+  border-top: 1px solid #23242e;
+  margin-top: 30px;
+  box-shadow: 0 -2px 12px #18192155;
+}
+
+@media (max-width: 700px) {
+  main { padding: 16px 3vw 22px 3vw; }
+  section { padding: 16px 8px; }
+  .navbar ul { gap: 8px; flex-direction: column; }
+}
+@media (max-width: 400px) {
+  header { padding: 24px 0 0 0; }
+  .navbar { padding: 0 12px; }
+}
+@media (max-width: 350px) {
+  button, .btn { width: 100%; box-sizing: border-box; }
+}
+
