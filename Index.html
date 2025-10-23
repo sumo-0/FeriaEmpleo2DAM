@@ -2,16 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Feria de Comercio - Nombre de la Feria</title>
+  <title>Feria de Empleo Irún</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <section id="sobre-nosotros">
-      <h1>AQUÍ IRÁ LA INFO</h1>
-      <p>Que nos tiene que dar todavía</p>
+      <img src="./img/La_Salle_Santo-Angel.png" alt="imagen_la_salle" class="logo">
     </section>
     <nav class="navbar">
       <ul>
@@ -23,43 +26,109 @@
       </ul>
     </nav>
   </header>
+
   <div class="divider"></div>
+
   <main>
     <section id="seccion-ganador">
       <h2>Ganador</h2>
       <div class="youtube-container">
         <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/qHSh_oEjpOs"
+          src="https://www.youtube.com/embed/qHShoEjpOs"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
       </div>
-      <p>EL PUTO GANADOR</p>
     </section>
+
     <div class="divider"></div>
+
     <section id="seccion-sobrenosotros">
       <h2>Sobre Nosotros</h2>
-      <p>Contenido sobre la feria, descripción, objetivos y organización.</p>
+      <p>Sobre la empresa</p>
     </section>
+
     <div class="divider"></div>
+
     <section id="seccion-descargas">
       <h2>Descargas</h2>
       <p>Aquí podrás descargar información de la feria, programa, etc.</p>
     </section>
+
     <div class="divider"></div>
+
     <section id="seccion-login">
       <h2>Inicio de Sesión</h2>
-      <button>Entrar</button>
+
+      <div class="container py-4">
+        <div class="row g-4 justify-content-center">
+
+          <!-- LOGIN -->
+          <div class="col-lg-5 col-md-8">
+            <div class="auth-card">
+              <h2 class="auth-title">Welcome Back</h2>
+              <p class="auth-sub">Sign in to your account to continue</p>
+
+              <form id="signin-form">
+                <div class="mb-3">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control auth-input" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control auth-input" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn auth-primary w-100 mb-3">Sign In</button>
+              </form>
+
+              <div class="text-center mt-3">
+                <a href="#" class="small text-decoration-none auth-link">Forgot your password?</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- REGISTER -->
+          <div class="col-lg-5 col-md-8">
+            <div class="auth-card">
+              <h2 class="auth-title">Create Account</h2>
+              <p class="auth-sub">Sign up to get started for free</p>
+
+              <form id="signup-form">
+                <div class="mb-3">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control auth-input" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control auth-input" placeholder="Enter a password" required>
+                </div>
+                <button type="submit" class="btn auth-primary w-100 mb-3">Sign Up</button>
+              </form>
+
+              <div class="text-center mt-3">
+                <a href="#" class="small text-decoration-none auth-link">Already have an account? Sign In</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
     <div class="divider"></div>
+
     <section id="seccion-empresas">
       <h2>Empresas</h2>
       <p>Lista de empresas participantes.</p>
     </section>
   </main>
+
   <footer>
     Feria de Empleo de Irún &copy; 2025
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
