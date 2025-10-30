@@ -5,23 +5,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #16171b;
+  background: #9aa0b4;
   color: #eaeaea;
   min-height: 100vh;
 }
 
 header {
-  background: #22232a;
+  background: #ffffff;
   padding: 32px 0 0 0;
-  border-bottom: 2px solid #2d2f36;
-  box-shadow: 0 2px 10px #18192160;
   position: relative;
 }
 
 .navbar {
-  background: #23242e;
+  background: #ffffff;
   padding: 0 24px;
-  border-bottom: 2px solid #2d2f36;
   border-radius: 0 0 12px 12px;
   display: flex;
   justify-content: center;
@@ -36,7 +33,7 @@ header {
 }
 
 .navbar ul li a {
-  color: #eaeaea;
+  color: #000000;
   text-decoration: none;
   padding: 11px 16px;
   border-radius: 6px;
@@ -52,7 +49,7 @@ header {
 /* Logo específico: posición arriba a la izquierda y tamaño fijo/responsive */
 .logo{
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 18px;
   width: 120px; /* tamaño por defecto del logo */
   height: auto;
@@ -94,8 +91,8 @@ main {
 }
 
 section {
-  background: #202128;
-  border: 1.5px solid #292a33;
+  background: #2B3A73;
+  border: 2px solid #fffb00;
   border-radius: 10px;
   box-shadow: 0 4px 12px #23242e2f;
   padding: 28px 22px;
@@ -104,7 +101,8 @@ section {
 }
 
 h1, h2 {
-  color: #eaeaea;
+  color: #ffffff;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 700;
   margin-bottom: 10px;
 }
