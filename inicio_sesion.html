@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feria de Empleo Irún</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./img/logo_salle_zgz.png"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Spot Ganador</a></li>
+        <li><a href="#">Descargas</a></li>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle menu-icon-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./img/imagen_menu.png" alt="menu_icon" class="menu-icon" id="img_menu">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="inicio_sesion.html">Inicio de sesión</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="empresas.html">Empresas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="index.html">
+      <img src="./img/logo_salle_zgz.png" alt="imagen_la_salle" class="logo">
+    </a>
+  </header>
+
+  
+  <main>
+    <div class="contenedor_forms">
+        <form class="registro">
+            <section><h2>Registro</h2>
+                <div class="mb-3 mt-5">
+                  <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">No compartiremos tu dirección de correo con terceros</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Repetir contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </section>
+        </form>
+
+        <form class="iniciosesion">
+            <section><h2>Inicio de sesión</h2>
+                <div class="mb-3 mt-5">
+                  <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">No compartiremos tu dirección de correo con terceros</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </section>
+        </form>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

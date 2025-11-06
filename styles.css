@@ -172,3 +172,29 @@ footer {
 .menu-icon-toggle::after {
   display: none;
 }
+.contenedor_forms{
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+  margin-top: 20px;
+
+  width:100%;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+.iniciosesion{
+  color: #ffffff;
+  width: fit-content;
+  margin: auto;
+}
+.iniciosesion button{
+  margin-left: 30%;
+}
+.registro{
+  color: #ffffff;
+  width: fit-content;
+  margin: auto;
+}
+.registro button{
+  margin-left: 30%;
+}
