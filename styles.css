@@ -49,7 +49,7 @@ header {
   transition: background 0.12s, color 0.12s;
 }
 .navbar ul li a:hover {
-  background: #31323b;
+  background: #656566;
   color: #fff;
 }
 
@@ -57,7 +57,7 @@ header {
   position: absolute;
   top: 20px;
   left: 18px;
-  width: 80px;
+  width: 60px;
   height: auto;
   object-fit: contain;
   display: block;
@@ -120,7 +120,7 @@ button, .btn {
   margin-bottom: 10px;
 }
 button:hover, .btn:hover { 
-  background: #2d2f36;
+  background: #9aa0b4;
   color: #fff;
 }
 
@@ -144,8 +144,8 @@ button:hover, .btn:hover {
 footer {
   padding: 14px 0;
   text-align: center;
-  background: #212126;
-  color: #888;
+  background: #2B3A73;
+  color: #fff;
   font-size: .93rem;
   border-top: 1px solid #23242e;
   margin-top: 30px;
@@ -163,4 +163,12 @@ footer {
 }
 @media (max-width: 350px) {
   button, .btn { width: 100%; box-sizing: border-box; }
+}
+
+.img_menu:hover{
+  /*vamos a sustituir una imagen por otra cuando pongamos el cursor encima*/
+  content: url('./img/imagen_menu_hover.png');
+}
+.menu-icon-toggle::after {
+  display: none;
 }
