@@ -16,7 +16,7 @@ header {
   position: relative;
 }
 
-.img_menu{
+.img_menu {
   width: 32px;
   height: 32px;
   position: absolute;
@@ -53,7 +53,7 @@ header {
   color: #fff;
 }
 
-.logo{
+.logo {
   position: absolute;
   top: 20px;
   left: 18px;
@@ -61,23 +61,6 @@ header {
   height: auto;
   object-fit: contain;
   display: block;
-}
-
-
-@media (max-width: 700px) {
-  .logo{
-    width: 96px;
-    top: 10px;
-    left: 12px;
-  }
-}
-
-@media (max-width: 400px) {
-  .logo{
-    width: 78px;
-    top: 8px;
-    left: 8px;
-  }
 }
 
 main {
@@ -119,7 +102,7 @@ button, .btn {
   margin-top: 14px;
   margin-bottom: 10px;
 }
-button:hover, .btn:hover { 
+button:hover, .btn:hover {
   background: #9aa0b4;
   color: #fff;
 }
@@ -165,36 +148,223 @@ footer {
   button, .btn { width: 100%; box-sizing: border-box; }
 }
 
-.img_menu:hover{
+.img_menu:hover {
   /*vamos a sustituir una imagen por otra cuando pongamos el cursor encima*/
   content: url('./img/imagen_menu_hover.png');
 }
 .menu-icon-toggle::after {
   display: none;
 }
-.contenedor_forms{
-  display:flex;
-  flex-direction: row;
-  gap:20px;
-  margin-top: 20px;
 
-  width:100%;
-  justify-content: center;
-  flex-wrap:wrap;
+/* === MENÚ HAMBURGUESA ANIMADO === */
+.bars__menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  transform: scale(1.5);
+  cursor: pointer;
+  z-index: 1001;
 }
-.iniciosesion{
+
+/* las tres rayas */
+.bars__menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 300ms;
+}
+
+/* transformaciones para la X */
+.activeline1__bars-menu {
+  transform: rotate(45deg) translate(-2px, 1px);
+}
+.activeline2__bars-menu {
+  opacity: 0;
+  margin-left: -30px;
+}
+.activeline3__bars-menu {
+  transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/* === MENÚ DESPLEGABLE (con animación suave + aparición escalonada) === */
+.hamburger-dropdown {
+  position: absolute;
+  top: 75px;
+  right: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+}
+
+/* estado visible */
+.hamburger-dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.hamburger-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+/* cada item comienza oculto y sube ligeramente; se anima mediante keyframes */
+.hamburger-dropdown ul li {
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: fadeInItem 0.4s forwards;
+}
+
+/* retrasos para efecto escalonado */
+.hamburger-dropdown.active ul li:nth-child(1) {
+  animation-delay: 0.08s;
+}
+.hamburger-dropdown.active ul li:nth-child(2) {
+  animation-delay: 0.22s;
+}
+
+/* animación que lleva al item a su posición final */
+@keyframes fadeInItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* estilos de los enlaces dentro del dropdown */
+.hamburger-dropdown ul li a {
+  display: block;
+  padding: 10px 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hamburger-dropdown ul li a:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/* === MOSTRAR SOLO EL MENÚ HAMBURGUESA EN MÓVILES === */
+@media (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+
+  .bars__menu {
+    display: block;
+  }
+}
+
+/* === MOSTRAR SOLO EL NAVBAR EN ESCRITORIO === */
+@media (min-width: 801px) {
+  .navbar {
+    display: flex;
+  }
+
+  .bars__menu {
+    display: none;
+  }
+
+  .hamburger-dropdown {
+    display: none !important;
+  }
+}
+
+/* === 🔧 AJUSTE DE HEADER EN RESPONSIVE (YA CORREGIDO) === */
+@media (max-width: 800px) {
+  header {
+    height: 70px; /* 1. Altura fija */
+    padding: 0 16px; /* 2. Padding solo en los lados */
+    box-sizing: border-box; /* 3. Para que el padding no sume a la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+  }
+
+  .bars__menu {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) scale(1.4);
+  }
+
+  .hamburger-dropdown {
+    top: 70px; /* 4. Que coincida con la altura del header */
+    right: 16px;
+    width: 220px;
+  }
+
+  .hamburger-dropdown ul li a {
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 801px) {
+  header {
+    padding: 28px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    left: 24px;
+    top: 32px;
+    width: 70px;
+  }
+}
+
+/* === 🔽 ESTILOS AÑADIDOS DE LOS FORMULARIOS 🔽 === */
+.contenedor_forms {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.iniciosesion {
   color: #ffffff;
   width: fit-content;
   margin: auto;
 }
-.iniciosesion button{
+.iniciosesion button {
   margin-left: 30%;
 }
-.registro{
+.registro {
   color: #ffffff;
   width: fit-content;
   margin: auto;
 }
-.registro button{
+.registro button {
   margin-left: 30%;
 }
