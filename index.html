@@ -13,6 +13,7 @@
 </head>
 <body>
   <header>
+    
     <nav class="navbar">
       <ul>
         <li><a href="#seccion-sobrenosotros">Sobre Nosotros</a></li>
@@ -20,6 +21,17 @@
         <li><a href="#seccion-descargas">Descargas</a></li>
         <li><a href="#seccion-login">Inicio de Sesión</a></li>
         <li><a href="#seccion-empresas">Empresas</a></li>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./img/imagen_menu.png" alt="menu_icon" class="menu-icon" id="img_menu">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <img src="./img/logo_salle_zgz.png" alt="imagen_la_salle" class="logo">
@@ -58,58 +70,13 @@
 
     <section id="seccion-login">
       <h2>Inicio de Sesión</h2>
-
-      <div class="container py-4">
-        <div class="row g-4 justify-content-center">
-
-          <!-- LOGIN -->
-          <div class="col-lg-5 col-md-8">
-            <div class="auth-card">
-              <h2 class="auth-title">Welcome Back</h2>
-              <p class="auth-sub">Sign in to your account to continue</p>
-
-              <form id="signin-form">
-                <div class="mb-3">
-                  <label class="form-label">Email Address</label>
-                  <input type="email" class="form-control auth-input" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-4">
-                  <label class="form-label">Password</label>
-                  <input type="password" class="form-control auth-input" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="btn auth-primary w-100 mb-3">Sign In</button>
-              </form>
-
-              <div class="text-center mt-3">
-                <a href="#" class="small text-decoration-none auth-link">Forgot your password?</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- REGISTER -->
-          <div class="col-lg-5 col-md-8">
-            <div class="auth-card">
-              <h2 class="auth-title">Create Account</h2>
-              <p class="auth-sub">Sign up to get started for free</p>
-
-              <form id="signup-form">
-                <div class="mb-3">
-                  <label class="form-label">Email Address</label>
-                  <input type="email" class="form-control auth-input" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-4">
-                  <label class="form-label">Password</label>
-                  <input type="password" class="form-control auth-input" placeholder="Enter a password" required>
-                </div>
-                <button type="submit" class="btn auth-primary w-100 mb-3">Sign Up</button>
-              </form>
-
-              <div class="text-center mt-3">
-                <a href="#" class="small text-decoration-none auth-link">Already have an account? Sign In</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
     </section>
 
