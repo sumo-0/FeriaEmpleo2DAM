@@ -1,24 +1,96 @@
-/* === ESTILOS MODIFICADOS (Corrección Tamaño Video + Header + Paleta "La Salle") === */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #FFFFFF; /* Fondo blanco */
+  background: #FFFFFF;
   color: #333333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+h1, h2 {
+  color: #00337F;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  flex-grow: 1;
+}
+
+section {
+  background: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 48px 24px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.impar {
+  background: #F4F6F8;
+  box-shadow: none;
+}
+
+footer {
+  padding: 14px 0;
+  text-align: center;
+  background: #00337F;
+  color: #FFFFFF;
+  font-size: .93rem;
+  border-top: none;
+  margin-top: 0px;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+button, .btn {
+  background: #3B4D81;
+  color: #FFD700;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 12px rgba(59, 77, 129, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+button:hover, .btn:hover {
+  background: #2A385E;
+  color: #FFD700;
+  box-shadow: 0 4px 15px rgba(42, 56, 94, 0.4);
+  transform: translateY(-2px);
+}
+
 header {
   background: #FFFFFF;
-  padding: 32px 0 0 0; 
+  padding: 32px 0 0 0;
   position: relative;
-  flex-shrink: 0; 
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); 
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   z-index: 1002;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .img_menu {
@@ -35,6 +107,7 @@ header {
   display: flex;
   justify-content: center;
 }
+
 .navbar > ul {
   display: flex;
   gap: 24px;
@@ -45,7 +118,7 @@ header {
 }
 
 .navbar ul li a {
-  color: #00337F; /* Azul corporativo */
+  color: #00337F;
   text-decoration: none;
   padding: 11px 16px;
   border-radius: 6px;
@@ -53,129 +126,46 @@ header {
   display: block;
   transition: all 0.2s ease-in-out;
 }
+
 .navbar ul li a:hover {
-  background: #00337F; 
-  color: #FFD700; /* Amarillo al pasar el ratón */
-}
-
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 18px;
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-main {
-  padding: 0; 
-  display: flex;
-  flex-direction: column;
-  gap: 0px; 
-  flex-grow: 1; 
-}
-
-section {
-  background: #FFFFFF; 
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); 
-  padding: 48px 24px; 
-  margin-bottom: 0px; 
-  position: relative;
-}
-
-.impar {
-  background: #F4F6F8; /* Gris muy suave */
-  box-shadow: none; 
-}
-
-h1, h2 {
-  color: #00337F;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-button, .btn {
-  background: #3B4D81;
-  color: #FFD700; 
-  font-family: inherit;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  box-shadow: 0 2px 12px rgba(59, 77, 129, 0.3);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-size: 1rem;
-  margin-top: 14px;
-  margin-bottom: 10px;
-}
-button:hover, .btn:hover { 
-  background: #2A385E; 
+  background: #00337F;
   color: #FFD700;
-  box-shadow: 0 4px 15px rgba(42, 56, 94, 0.4);
-  transform: translateY(-2px); 
 }
 
-footer {
-  padding: 14px 0;
-  text-align: center;
-  background: #00337F; 
-  color: #FFFFFF;
-  font-size: .93rem;
-  border-top: none;
-  margin-top: 0px; 
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
-  flex-shrink: 0; 
-}
-
-/* === MEDIA QUERIES AJUSTADAS PARA ALINEACIÓN === */
-
-@media (max-width: 700px) {
-  main { padding: 0; } 
-  section { padding: 32px 16px; } 
-}
-@media (max-width: 400px) {
-  header { padding: 24px 0 0 0; }
-  .navbar { padding: 0 12px; }
-}
-@media (max-width: 350px) {
-  button, .btn { width: 100%; box-sizing: border-box; }
-}
-
-/* Estilos del Menú Hamburguesa */
 .bars__menu {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 25px; 
+  top: 25px;
   right: 24px;
   transform: scale(1.5);
   cursor: pointer;
   z-index: 1001;
 }
+
 .bars__menu span {
   display: block;
   width: 100%;
   height: 2px;
-  background: #00337F; /* Azul oscuro */
+  background: #00337F;
   margin-top: 6px;
   transform-origin: 0px 100%;
   transition: all 300ms;
 }
+
 .activeline1__bars-menu {
   transform: rotate(45deg) translate(-2px, 1px);
 }
+
 .activeline2__bars-menu {
   opacity: 0;
   margin-left: -30px;
 }
+
 .activeline3__bars-menu {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
 
-/* Dropdown del menú */
 .hamburger-dropdown {
   position: absolute;
   top: 75px;
@@ -191,27 +181,33 @@ footer {
   transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 1000;
 }
+
 .hamburger-dropdown.active {
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
 }
+
 .hamburger-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 8px 0;
 }
+
 .hamburger-dropdown ul li {
   opacity: 0;
   transform: translateY(-5px);
   animation: fadeInItem 0.4s forwards;
 }
+
 .hamburger-dropdown.active ul li:nth-child(1) {
   animation-delay: 0.08s;
 }
+
 .hamburger-dropdown.active ul li:nth-child(2) {
   animation-delay: 0.22s;
 }
+
 @keyframes fadeInItem {
   to {
     opacity: 1;
@@ -222,17 +218,17 @@ footer {
 .hamburger-dropdown ul li a {
   display: block;
   padding: 10px 18px;
-  color: #00337F; 
+  color: #00337F;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s, color 0.3s;
 }
+
 .hamburger-dropdown ul li a:hover {
   background: #00337F;
-  color: #FFD700; 
+  color: #FFD700;
 }
 
-/* === DISEÑO MÓVIL EXTENDIDO (HASTA 1000PX) === */
 @media (max-width: 1000px) {
   .navbar {
     display: none;
@@ -242,35 +238,39 @@ footer {
   }
   
   header {
-    height: 70px; 
-    padding: 0 16px; 
-    box-sizing: border-box; 
+    height: 70px;
+    padding: 0 16px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background: #FFFFFF; 
+    background: #FFFFFF;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    border-bottom: none; 
+    border-bottom: none;
   }
+
   .logo {
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    width: 90px; 
+    width: 90px;
   }
+
   .bars__menu {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%) scale(1.4);
   }
+
   .hamburger-dropdown {
-    top: 70px; 
+    top: 70px;
     right: 16px;
     width: 220px;
   }
+
   .hamburger-dropdown ul li a {
     text-align: left;
     padding: 12px 20px;
@@ -278,7 +278,6 @@ footer {
   }
 }
 
-/* === DISEÑO DESKTOP (>1001px) === */
 @media (min-width: 1001px) {
   .navbar {
     display: flex;
@@ -296,12 +295,13 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
   .logo {
     position: absolute;
     left: 24px;
     top: 32px;
     width: 70px;
-    transform: none; 
+    transform: none;
   }
 }
 
@@ -316,57 +316,54 @@ footer {
 }
 
 .iniciosesion, .registro {
-  color: #333333;  
+  color: #333333;
   background: #FFFFFF;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   border: 1px solid #E0E0E0;
   width: fit-content;
-  margin: 10px; 
+  margin: 10px;
 }
+
 .iniciosesion button {
   margin-left: 30%;
 }
+
 .registro button {
   margin-left: 30%;
 }
 
 .contenedor_video {
-  display: flex; 
+  display: flex;
   flex-direction: row;
-  gap: 45px; 
+  gap: 45px;
   flex-wrap: wrap;
   height: auto;
   justify-content: center;
   align-items: center;
 }
 
-/* === CORRECCIÓN DEL VIDEO === */
 .youtube-container {
-  min-width: 300px; 
-  /* Borde grueso en azul corporativo */
-  border: 4px solid #00337F; 
-  border-radius: 8px; 
-  box-shadow: 0 0 15px rgba(0, 51, 127, 0.2); 
-  overflow: hidden; 
+  min-width: 300px;
+  border: 4px solid #00337F;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 51, 127, 0.2);
+  overflow: hidden;
 }
 
 .youtube-container iframe {
   border: none;
-  /* display: block elimina el espacio en blanco inferior */
-  display: block; 
-  /* NOTA: He quitado width: 100% y height: 100% para respetar el tamaño original */
-  max-width: 100%; /* Solo para que no se salga en móviles muy pequeños */
+  display: block;
+  max-width: 100%;
 }
 
 .texto_video {
-  flex: 1; 
-  min-width: 250px; 
+  flex: 1;
+  min-width: 250px;
   margin-left: 30px;
 }
 
-/* Modal styles */
 .modal {
   display: none;
   position: fixed;
@@ -446,4 +443,18 @@ footer {
   background: #00337F;
   color: #FFFFFF;
   font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  main { padding: 0; }
+  section { padding: 32px 16px; }
+}
+
+@media (max-width: 400px) {
+  header { padding: 24px 0 0 0; }
+  .navbar { padding: 0 12px; }
+}
+
+@media (max-width: 350px) {
+  button, .btn { width: 100%; box-sizing: border-box; }
 }
