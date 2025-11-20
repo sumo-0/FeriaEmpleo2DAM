@@ -29,7 +29,7 @@ main {
 section {
   background: #FFFFFF;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 48px 24px;
+  padding: 48px 4%;
   margin-bottom: 0px;
   position: relative;
 }
@@ -43,7 +43,7 @@ footer {
   padding: 14px 0;
   text-align: center;
   background: #00337F;
-  color: #FFFFFF;
+  color: #333333;
   font-size: .93rem;
   border-top: none;
   margin-top: 0px;
@@ -337,7 +337,7 @@ header {
 .contenedor_video {
   display: flex;
   flex-direction: row;
-  gap: 45px;
+  gap: 35px;
   flex-wrap: wrap;
   height: auto;
   justify-content: center;
@@ -350,6 +350,7 @@ header {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 51, 127, 0.2);
   overflow: hidden;
+  margin-right: 100px;
 }
 
 .youtube-container iframe {
@@ -361,7 +362,6 @@ header {
 .texto_video {
   flex: 1;
   min-width: 250px;
-  margin-left: 30px;
 }
 
 .modal {
