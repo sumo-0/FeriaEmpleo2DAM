@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* GLOBAL E INDEX*/
+
 body {
   margin: 0;
   padding: 0;
@@ -29,7 +31,7 @@ main {
 section {
   background: #FFFFFF;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 48px 4%;
+  padding: 48px 12%;
   margin-bottom: 0px;
   position: relative;
 }
@@ -43,7 +45,7 @@ footer {
   padding: 14px 0;
   text-align: center;
   background: #00337F;
-  color: #333333;
+  color: #FFFFFF;
   font-size: .93rem;
   border-top: none;
   margin-top: 0px;
@@ -93,13 +95,6 @@ header {
   display: block;
 }
 
-.img_menu {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  cursor: pointer;
-}
-
 .navbar {
   background: #FFFFFF;
   padding: 0 24px;
@@ -130,6 +125,170 @@ header {
 .navbar ul li a:hover {
   background: #00337F;
   color: #FFD700;
+}
+
+.contenedor_video {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-container {
+  min-width: 300px;
+  border: 4px solid #00337F;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 51, 127, 0.2);
+  overflow: hidden;
+}
+
+.youtube-container iframe {
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+
+.texto_video {
+  flex: 1;
+  min-width: 250px;
+  margin-left: 30px;
+}
+
+
+
+/*EMPRESAS*/
+
+.grid-empresas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 80px;
+  padding: 20px 0;
+}
+
+.card-empresa {
+  background: #FFFFFF;
+  border: 2px solid #00337F;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 51, 127, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card-empresa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 51, 127, 0.2);
+}
+
+.card-empresa h3 {
+  color: #00337F;
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.card-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.badge-centro {
+  background: #F0F0F0;
+  color: #555;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-grado {
+  background: #00337F;
+  color: #FFD700;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.btn-web {
+  flex: 1;
+  background: #3B4D81;
+  color: #FFD700;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-web:hover {
+  background: #00337F;
+  color: #FFFFFF;
+}
+
+.btn-email {
+  background: #F4F6F8;
+  color: #00337F;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-email:hover {
+  background: #00337F;
+  color: #fff;
+  border-color: #00337F;
+}
+
+.btn-disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+
+/* MENÚ HAMBURGUESA*/
+
+.img_menu {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
 }
 
 .bars__menu {
@@ -305,6 +464,10 @@ header {
   }
 }
 
+
+
+/* INICIO DE SESIÓN*/
+
 .contenedor_forms {
   display: flex;
   flex-direction: row;
@@ -332,36 +495,6 @@ header {
 
 .registro button {
   margin-left: 30%;
-}
-
-.contenedor_video {
-  display: flex;
-  flex-direction: row;
-  gap: 35px;
-  flex-wrap: wrap;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.youtube-container {
-  min-width: 300px;
-  border: 4px solid #00337F;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 51, 127, 0.2);
-  overflow: hidden;
-  margin-right: 100px;
-}
-
-.youtube-container iframe {
-  border: none;
-  display: block;
-  max-width: 100%;
-}
-
-.texto_video {
-  flex: 1;
-  min-width: 250px;
 }
 
 .modal {
@@ -445,6 +578,8 @@ header {
   font-weight: bold;
 }
 
+
+/* OTROS MEDIA QUERIES GLOBALES */
 @media (max-width: 700px) {
   main { padding: 0; }
   section { padding: 32px 16px; }
