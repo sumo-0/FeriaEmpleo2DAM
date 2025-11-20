@@ -1,23 +1,23 @@
-/* === ESTILOS MODIFICADOS (Paleta "Onyx & Cyan") === */
+/* === ESTILOS MODIFICADOS (Corrección Tamaño Video + Header + Paleta "La Salle") === */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #121212;
-  color: #B0B0B0;
+  background: #FFFFFF; /* Fondo blanco */
+  color: #333333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  background: #1E1E1E;
+  background: #FFFFFF;
   padding: 32px 0 0 0; 
   position: relative;
   flex-shrink: 0; 
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); 
   z-index: 1002;
 }
 
@@ -29,7 +29,7 @@ header {
 }
 
 .navbar {
-  background: #1E1E1E;
+  background: #FFFFFF;
   padding: 0 24px;
   border-radius: 0 0 12px 12px;
   display: flex;
@@ -45,17 +45,17 @@ header {
 }
 
 .navbar ul li a {
-  color: #FFFFFF; 
+  color: #00337F; /* Azul corporativo */
   text-decoration: none;
   padding: 11px 16px;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   transition: all 0.2s ease-in-out;
 }
 .navbar ul li a:hover {
-  background: #00B8D4; 
-  color: #121212;
+  background: #00337F; 
+  color: #FFD700; /* Amarillo al pasar el ratón */
 }
 
 .logo {
@@ -77,34 +77,34 @@ main {
 }
 
 section {
-  background: #1E1E1E; 
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
+  background: #FFFFFF; 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); 
   padding: 48px 24px; 
   margin-bottom: 0px; 
   position: relative;
 }
 
 .impar {
-  background: #121212; 
+  background: #F4F6F8; /* Gris muy suave */
   box-shadow: none; 
 }
 
 h1, h2 {
-  color: #FFFFFF;
+  color: #00337F;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 button, .btn {
-  background: #00B8D4;
-  color: #121212; 
+  background: #3B4D81;
+  color: #FFD700; 
   font-family: inherit;
   font-weight: 700;
   border: none;
   border-radius: 6px;
   padding: 10px 20px;
-  box-shadow: 0 2px 12px rgba(0, 184, 212, 0.3);
+  box-shadow: 0 2px 12px rgba(59, 77, 129, 0.3);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-size: 1rem;
@@ -112,23 +112,25 @@ button, .btn {
   margin-bottom: 10px;
 }
 button:hover, .btn:hover { 
-  background: #00E5FF; 
-  color: #121212;
-  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.5);
+  background: #2A385E; 
+  color: #FFD700;
+  box-shadow: 0 4px 15px rgba(42, 56, 94, 0.4);
   transform: translateY(-2px); 
 }
 
 footer {
   padding: 14px 0;
   text-align: center;
-  background: #1E1E1E; 
-  color: #B0B0B0;
+  background: #00337F; 
+  color: #FFFFFF;
   font-size: .93rem;
-  border-top: 1px solid #333333;
+  border-top: none;
   margin-top: 0px; 
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
   flex-shrink: 0; 
 }
+
+/* === MEDIA QUERIES AJUSTADAS PARA ALINEACIÓN === */
 
 @media (max-width: 700px) {
   main { padding: 0; } 
@@ -142,12 +144,12 @@ footer {
   button, .btn { width: 100%; box-sizing: border-box; }
 }
 
-
+/* Estilos del Menú Hamburguesa */
 .bars__menu {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 32px;
+  top: 25px; 
   right: 24px;
   transform: scale(1.5);
   cursor: pointer;
@@ -157,7 +159,7 @@ footer {
   display: block;
   width: 100%;
   height: 2px;
-  background: #FFFFFF; 
+  background: #00337F; /* Azul oscuro */
   margin-top: 6px;
   transform-origin: 0px 100%;
   transition: all 300ms;
@@ -173,14 +175,15 @@ footer {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
 
+/* Dropdown del menú */
 .hamburger-dropdown {
   position: absolute;
   top: 75px;
   right: 25px;
-  background: #1E1E1E;
-  border: 1px solid #333333;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   overflow: hidden;
   opacity: 0;
   transform: translateY(-10px);
@@ -219,36 +222,25 @@ footer {
 .hamburger-dropdown ul li a {
   display: block;
   padding: 10px 18px;
-  color: #FFFFFF; 
+  color: #00337F; 
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s, color 0.3s;
 }
 .hamburger-dropdown ul li a:hover {
-  background: #00B8D4;
-  color: #121212; 
+  background: #00337F;
+  color: #FFD700; 
 }
 
-@media (max-width: 800px) {
+/* === DISEÑO MÓVIL EXTENDIDO (HASTA 1000PX) === */
+@media (max-width: 1000px) {
   .navbar {
     display: none;
   }
   .bars__menu {
     display: block;
   }
-}
-@media (min-width: 801px) {
-  .navbar {
-    display: flex;
-  }
-  .bars__menu {
-    display: none;
-  }
-  .hamburger-dropdown {
-    display: none !important;
-  }
-}
-@media (max-width: 1000px) {
+  
   header {
     height: 70px; 
     padding: 0 16px; 
@@ -257,8 +249,8 @@ footer {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: #1E1E1E; 
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    background: #FFFFFF; 
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     border-bottom: none; 
   }
   .logo {
@@ -266,7 +258,7 @@ footer {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    width: 90px;
+    width: 90px; 
   }
   .bars__menu {
     position: absolute;
@@ -285,7 +277,19 @@ footer {
     font-size: 15px;
   }
 }
+
+/* === DISEÑO DESKTOP (>1001px) === */
 @media (min-width: 1001px) {
+  .navbar {
+    display: flex;
+  }
+  .bars__menu {
+    display: none;
+  }
+  .hamburger-dropdown {
+    display: none !important;
+  }
+  
   header {
     padding: 28px 0 10px 0;
     display: flex;
@@ -312,11 +316,12 @@ footer {
 }
 
 .iniciosesion, .registro {
-  color: #B0B0B0;  
-  background: #1E1E1E;
+  color: #333333;  
+  background: #FFFFFF;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E0E0E0;
   width: fit-content;
   margin: 10px; 
 }
@@ -337,17 +342,22 @@ footer {
   align-items: center;
 }
 
+/* === CORRECCIÓN DEL VIDEO === */
 .youtube-container {
-
   min-width: 300px; 
-  border: 2px solid #00B8D4; 
+  /* Borde grueso en azul corporativo */
+  border: 4px solid #00337F; 
   border-radius: 8px; 
-  box-shadow: 0 0 15px rgba(0, 184, 212, 0.4); 
+  box-shadow: 0 0 15px rgba(0, 51, 127, 0.2); 
   overflow: hidden; 
 }
 
 .youtube-container iframe {
   border: none;
+  /* display: block elimina el espacio en blanco inferior */
+  display: block; 
+  /* NOTA: He quitado width: 100% y height: 100% para respetar el tamaño original */
+  max-width: 100%; /* Solo para que no se salga en móviles muy pequeños */
 }
 
 .texto_video {
@@ -365,7 +375,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   overflow-y: auto;
   animation: fadeIn 0.3s ease-out;
 }
@@ -380,16 +390,17 @@ footer {
 }
 
 .modal-content {
-  background: #1E1E1E;
+  background: #FFFFFF;
   margin: 10vh auto;
   padding: 25px;
-  border: 1px solid #333333;
+  border: 1px solid #E0E0E0;
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
   position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   animation: slideDown 0.3s ease-out;
+  color: #333333;
 }
 
 @keyframes slideDown {
@@ -404,7 +415,7 @@ footer {
 }
 
 .close {
-  color: #B0B0B0;
+  color: #666666;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -412,7 +423,7 @@ footer {
 }
 
 .close:hover {
-  color: #00B8D4;
+  color: #00337F;
 }
 
 .auth-tabs {
@@ -424,13 +435,15 @@ footer {
   flex: 1;
   padding: 10px;
   text-align: center;
-  background: #121212;
-  color: #B0B0B0;
+  background: #F0F0F0;
+  color: #666666;
   cursor: pointer;
   border: none;
+  border-bottom: 2px solid transparent;
 }
 
 .auth-tab.active {
-  background: #00B8D4;
-  color: #121212;
+  background: #00337F;
+  color: #FFFFFF;
+  font-weight: bold;
 }

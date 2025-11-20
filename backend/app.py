@@ -7,7 +7,6 @@ app = Flask(__name__)
 app.secret_key = '1234'  
 CORS(app, supports_credentials=True)
 
-# File to store users
 USERS_FILE = 'users.txt'
 
 def load_users():
