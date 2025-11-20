@@ -1,151 +1,373 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Feria de Empleo Irún - Empresas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <title>Feria de Empleo Irún - Empresas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./img/logo_salle_zgz.png"/>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html#seccion-sobrenosotros">Sobre Nosotros</a></li>
-          <li><a href="index.html#seccion-ganador">Spot Ganador</a></li>
-          <li><a href="index.html#seccion-descargas">Descargas</a></li>
-          <li><a href="#" onclick="logout(); return false;">Cerrar sesión</a></li>
-          <li><a href="empresas.html">Empresas</a></li>
-        </ul>
-      </nav>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./img/logo_salle_zgz.png"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html#seccion-sobrenosotros">Sobre Nosotros</a></li>
+        <li><a href="index.html#seccion-ganador">Spot Ganador</a></li>
+        <li><a href="index.html#seccion-descargas">Descargas</a></li>
+        <li><a href="#" onclick="logout(); return false;">Cerrar sesión</a></li>
+        <li><a href="empresas.html">Empresas</a></li>
+      </ul>
+    </nav>
 
-      <div class="bars__menu" id="barsMenu">
-        <span class="line1__bars-menu"></span>
-        <span class="line2__bars-menu"></span>
-        <span class="line3__bars-menu"></span>
-      </div>
+    <div class="bars__menu" id="barsMenu">
+      <span class="line1__bars-menu"></span>
+      <span class="line2__bars-menu"></span>
+      <span class="line3__bars-menu"></span>
+    </div>
 
-      <div class="hamburger-dropdown" id="hamburgerMenu">
-        <ul>
-          <li><a href="index.html#seccion-sobrenosotros">Sobre Nosotros</a></li>
-          <li><a href="index.html#seccion-ganador">Spot Ganador</a></li>
-          <li><a href="index.html#seccion-descargas">Descargas</a></li>
-          <li><a href="#" onclick="logout(); return false;">Cerrar sesión</a></li>
-          <li><a href="empresas.html">Empresas</a></li>
-        </ul>
-      </div>
+    <div class="hamburger-dropdown" id="hamburgerMenu">
+      <ul>
+        <li><a href="index.html#seccion-sobrenosotros">Sobre Nosotros</a></li>
+        <li><a href="index.html#seccion-ganador">Spot Ganador</a></li>
+        <li><a href="index.html#seccion-descargas">Descargas</a></li>
+        <li><a href="#" onclick="logout(); return false;">Cerrar sesión</a></li>
+        <li><a href="empresas.html">Empresas</a></li>
+      </ul>
+    </div>
 
-      <a href="index.html">
-        <img src="./img/logo_salle_zgz.png" alt="imagen_la_salle" class="logo">
-      </a>
-    </header>
+    <a href="index.html">
+      <img src="./img/logo_salle_zgz.png" alt="imagen_la_salle" class="logo">
+    </a>
+  </header>
 
-    <main>
-      <section>
-        <h2>Empresas Participantes</h2>
-        <p>Conoce a las empresas simuladas que participan en nuestra feria de empleo 2026.</p>
+  <main>
+    <section>
+      <h2>Empresas Participantes</h2>
+      <p style="margin-bottom: 30px;">Descubre todas las empresas simuladas que forman parte de nuestra feria de empleo.</p>
+      
+      <div class="grid-empresas">
 
-        <div class="grid-empresas">
-
-          <div class="card-empresa">
-            <h3>LASI</h3>
-            <div class="card-tags">
-              <span class="badge-centro">INCA</span>
-              <span class="badge-grado">Grado Básico</span>
-            </div>
-            <p class="card-desc">Proyecto de moda y diseño. Actividad creativa enfocada en tendencias actuales.</p>
-            <div class="card-actions">
-              <a href="mailto:fashioncolasalle@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="https://jonathancobas5.wixsite.com/lasi" target="_blank" class="btn-web">Visitar Web</a>
-            </div>
+        <div class="card-empresa">
+          <h3>LASI</h3>
+          <div class="card-tags">
+            <span class="badge-centro">INCA</span>
+            <span class="badge-grado">Grado Básico</span>
           </div>
-
-          <div class="card-empresa">
-            <h3>EPIWORKS</h3>
-            <div class="card-tags">
-              <span class="badge-centro">INSTITUCIÓN LA SALLE</span>
-              <span class="badge-grado">Grado Medio</span>
-            </div>
-            <p class="card-desc">Venta al por mayor de equipos de protección individual y vestimenta laboral.</p>
-            <div class="card-actions">
-              <a href="mailto:epiworks.sefed@lasalleinstitucion.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="https://epiworkssefed.wixsite.com/epiworks" target="_blank" class="btn-web">Visitar Web</a>
-            </div>
+          <p class="card-desc">Proyecto de moda y diseño enfocado en tendencias actuales.</p>
+          <div class="card-actions">
+            <a href="mailto:fashioncolasalle@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://jonathancobas5.wixsite.com/lasi" target="_blank" class="btn-web">Visitar Web</a>
           </div>
-
-          <div class="card-empresa">
-            <h3>ZAPALDU</h3>
-            <div class="card-tags">
-              <span class="badge-centro">IRUNGO LA SALLE</span>
-              <span class="badge-grado">Grado Superior</span>
-            </div>
-            <p class="card-desc">Diseño, fabricación y venta de zapatillas personalizadas y sostenibles con tecnología incorporada.</p>
-            <div class="card-actions">
-              <a href="mailto:zapalduinfo@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="" class="btn-web btn-disabled">Web no disponible</a>
-            </div>
-          </div>
-
-          <div class="card-empresa">
-            <h3>PAPERMAS</h3>
-            <div class="card-tags">
-              <span class="badge-centro">LA SALLE SAGRADO CORAZÓN</span>
-              <span class="badge-grado">Grado Medio</span>
-            </div>
-            <p class="card-desc">Distribución y venta de artículos de papelería y material de oficina.</p>
-            <div class="card-actions">
-              <a href="mailto:reception@papermas.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="https://sites.google.com/lasallemundonuevo.es/papermas/inicio" target="_blank" class="btn-web">Visitar Web</a>
-            </div>
-          </div>
-
-          <div class="card-empresa">
-            <h3>OFIDESIGN</h3>
-            <div class="card-tags">
-              <span class="badge-centro">LA SALLE JEREZ</span>
-              <span class="badge-grado">Grado Medio</span>
-            </div>
-            <p class="card-desc">Comercialización de mobiliario de oficina y diseño de espacios personalizados para entornos laborales.</p>
-            <div class="card-actions">
-              <a href="mailto:reception@offidesign.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="https://sites.google.com/d/1seS089uDtdCk8N3gR5pFFCzktYqjSWwR/p/1nIuqsqro521e8BDYW5Zp-4gGrROtT_pq/edit" target="_blank" class="btn-web">Visitar Web</a>
-            </div>
-          </div>
-
-          <div class="card-empresa">
-            <h3>TECNUS</h3>
-            <div class="card-tags">
-              <span class="badge-centro">LA SALLE MADRID</span>
-              <span class="badge-grado">Grado Superior</span>
-            </div>
-            <p class="card-desc">Comercialización de productos tecnológicos e innovación.</p>
-            <div class="card-actions">
-              <a href="mailto:tecnusventas@lasallesagradocorazon.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="" class="btn-web btn-disabled">Web no disponible</a>
-            </div>
-          </div>
-
-          <div class="card-empresa">
-            <h3>AUREAL SL</h3>
-            <div class="card-tags">
-              <span class="badge-centro">LA SALLE MADRID</span>
-              <span class="badge-grado">Grado Medio</span>
-            </div>
-            <p class="card-desc">Servicios de limpieza profesional y mantenimiento.</p>
-            <div class="card-actions">
-              <a href="mailto:empresasimnulada1@lasallesagradocorazon.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
-              <a href="" class="btn-web btn-disabled">Web no disponible</a>
-            </div>
-          </div>
-
         </div>
-      </section>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="auth-check.js"></script>
-  </body>
+        <div class="card-empresa">
+          <h3>EPIWORKS LA SALLE</h3>
+          <div class="card-tags">
+            <span class="badge-centro">INSTITUCIÓN LA SALLE</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Venta al por mayor de equipos de protección individual y vestimenta laboral.</p>
+          <div class="card-actions">
+            <a href="mailto:epiworks.sefed@lasalleinstitucion.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://epiworkssefed.wixsite.com/epiworks" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>ZAPALDU</h3>
+          <div class="card-tags">
+            <span class="badge-centro">IRUNGO LA SALLE</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Zapatillas personalizadas sostenibles con tecnología incorporada.</p>
+          <div class="card-actions">
+            <a href="mailto:zapalduinfo@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>Aulki</h3>
+          <div class="card-tags">
+            <span class="badge-centro">IRUNGO LA SALLE</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Fabricación y venta de sillas de oficina inteligentes.</p>
+          <div class="card-actions">
+            <a href="mailto:aulki.info@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>LOREARTEAN</h3>
+          <div class="card-tags">
+            <span class="badge-centro">IRUNGO LA SALLE</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Floristería y máquinas de vending de flores.</p>
+          <div class="card-actions">
+            <a href="mailto:lorearteanirun@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>GREENYKIT</h3>
+          <div class="card-tags">
+            <span class="badge-centro">IRUNGO LA SALLE</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Kits de limpieza sostenibles y productos ecológicos para el hogar y empresas.</p>
+          <div class="card-actions">
+            <a href="mailto:greenykit.irun@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>VelocityCar</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE BARCELONETA</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Restauración, venta y alquiler de automóviles clásicos para eventos.</p>
+          <div class="card-actions">
+            <a href="mailto:velocitycar.sefed@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://velocitycar.wixsite.com/velocitycar" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>SALLE-LAN BILTEGIAK</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE BERROZPE</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Venta de artículos profesionales para el almacenaje.</p>
+          <div class="card-actions">
+            <a href="mailto:sallelanbiltegiak.sefed@lsbikasleak.eus" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sallelanbiltegiakm.wixsite.com/sallelanbiltegiak" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>GISING, SLS</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE GRACIA</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Regalos corporativos y detalles para empresas.</p>
+          <div class="card-actions">
+            <a href="mailto:gising.2526@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>Enfruita't SL</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MANLLEU</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Elaboración y venta de helados y productos de fruta.</p>
+          <div class="card-actions">
+            <a href="mailto:fruitat@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://alanmunoz2006.wixsite.com/enfruitat" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>IronBites, SL</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MANLLEU</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Suplementos alimenticios y productos dietéticos deportivos.</p>
+          <div class="card-actions">
+            <a href="mailto:Ironbites50@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href=" https://sites.google.com/view/ironbites-com/productes/post-entreno/magnesi-essencial" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>HEMERA, SL</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MANLLEU</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Perfumes personalizados según el grupo sanguíneo.</p>
+          <div class="card-actions">
+            <a href="mailto:sl.hemera@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sites.google.com/view/hemerasl/inicio" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>TASTETS D'ARREU, S.L.</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MANLLEU</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Gastronomía y productos multiculturales.</p>
+          <div class="card-actions">
+            <a href="mailto:tastetsdarreu@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sites.google.com/view/tastetsdarreu/quien-somos" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>NEXA</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MOLLERUSA</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Servicios de ocio y actividades deportivas.</p>
+          <div class="card-actions">
+            <a href="mailto:nexalleida@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://tuit.cat/qSwSX" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>Tech City</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MOLLERUSA</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Venta al por menor de productos informáticos.</p>
+          <div class="card-actions">
+            <a href="mailto:techcitylasalle@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://techcitylasalle.wixsite.com/tech-city" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>VISUALIX</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE JEREZ</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Cámaras, accesorios y consultoría audiovisual para marketing.</p>
+          <div class="card-actions">
+            <a href="mailto:reception@visualix.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sites.google.com/view/visualixcom/inicio?scoped_locale=es" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>CREAMATERIA</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE JEREZ</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Uniformes, ropa casual y EPIs sostenibles personalizables.</p>
+          <div class="card-actions">
+            <a href="mailto:reception@creamateria.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sites.google.com/lasallemundonuevo.es/creamateria/inicio" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>PAPERMÁS</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE JEREZ</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Material de oficina, papelería y formación en personalización.</p>
+          <div class="card-actions">
+            <a href="mailto:reception@papermas.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sites.google.com/lasallemundonuevo.es/papermas/inicio" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>OFIDESIGN</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE JEREZ</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Mobiliario de oficina y diseño de espacios laborales.</p>
+          <div class="card-actions">
+            <a href="mailto:reception@offidesign.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://sites.google.com/d/1seS089uDtdCk8N3gR5pFFCzktYqjSWwR/p/1nIuqsqro521e8BDYW5Zp-4gGrROtT_pq/edit" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>Tecnus</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MADRID</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Comercialización de productos tecnológicos.</p>
+          <div class="card-actions">
+            <a href="mailto:tecnusventas@lasallesagradocorazon.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>AUREAL SL</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MADRID</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Servicios profesionales de limpieza.</p>
+          <div class="card-actions">
+            <a href="mailto:empresasimnulada1@lasallesagradocorazon.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>SICUREZZADIRECT SL</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MADRID</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Distribución de aparatos y sistemas de vigilancia.</p>
+          <div class="card-actions">
+            <a href="mailto:empresasimulada2@lasallesagradocorazon.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>FURNINNOVA SL</h3>
+          <div class="card-tags">
+            <span class="badge-centro">LA SALLE MADRID</span>
+            <span class="badge-grado">Grado Medio</span>
+          </div>
+          <p class="card-desc">Distribución de muebles de oficina.</p>
+          <div class="card-actions">
+            <a href="mailto:empresasimulada3@lasallesagradocorazon.es" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#" class="btn-web btn-disabled">Web no disponible</a>
+          </div>
+        </div>
+
+        <div class="card-empresa">
+          <h3>SALLEMAT SUMINISTROS S.L.</h3>
+          <div class="card-tags">
+            <span class="badge-centro">SAN JUAN BAUTISTA</span>
+            <span class="badge-grado">Grado Superior</span>
+          </div>
+          <p class="card-desc">Suministros de ferretería, pintura y jardinería.</p>
+          <div class="card-actions">
+            <a href="mailto:info.sallematsuministros@gmail.com" class="btn-email" title="Enviar Correo"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://infosallematsumini.wixsite.com/sallemat-suministros" target="_blank" class="btn-web">Visitar Web</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="auth-check.js"></script>
+</body>
 </html>
