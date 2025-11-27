@@ -4,7 +4,7 @@
 // CONFIGURACIÓN DE TU SERVIDOR (¡CAMBIA ESTO!)
 $servidor = "localhost";      // En el 99% de hostings se deja "localhost"
 $usuario  = "root";   // El usuario de la base de datos que creaste en el hosting
-$password = "1234";// La contraseña de ese usuario
+$password = "1213";// La contraseña de ese usuario
 $base_datos = "feria_empleo_irun";    // El nombre de tu base de datos en el hosting
 
 // Conexión

@@ -33,6 +33,7 @@ section {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   padding: 48px 12%;
   margin-bottom: 0px;
+  border-bottom: 1px solid #FFD700;
   position: relative;
 }
 
@@ -82,16 +83,15 @@ header {
   flex-shrink: 0;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   z-index: 1002;
+  border-bottom: 2px solid #FFD700;
 }
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 18px;
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  display: block;
+
+
+.logo img{
+  width: 145%;
+  height: 145%;
+  margin-top: -20px;
 }
 
 .navbar {
@@ -109,6 +109,7 @@ header {
   margin: 0;
   padding: 0;
   justify-content: center;
+
 }
 
 .navbar ul li a {
@@ -119,6 +120,7 @@ header {
   font-weight: 700;
   display: block;
   transition: all 0.2s ease-in-out;
+  font-size: 120%;
 }
 
 .navbar ul li a:hover {
@@ -126,25 +128,24 @@ header {
   color: #FFD700;
 }
 
-.contenedor_video {
+.seccion-ganador{
   display: flex;
-  flex-direction: row;
-  gap: 45px;
-  flex-wrap: wrap;
-  height: auto;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .youtube-container {
+  box-sizing: content-box;
   min-width: 300px;
-  border: 4px solid #00337F;
-  border-radius: 8px;
+  max-width: 806.4px;
+  border: 4px solid #FFD700;
   box-shadow: 0 0 15px rgba(0, 51, 127, 0.2);
   overflow: hidden;
+  align-self: center;
+  margin: 0 auto;
 }
 
 .youtube-container iframe {
+  align-items: center;
   border: none;
   display: block;
   max-width: 100%;
@@ -153,9 +154,12 @@ header {
 .texto_video {
   flex: 1;
   min-width: 250px;
+  text-align:center;
 }
 
-
+.seccion-sobrenosotros{
+  justify-content: center;
+}
 
 /*EMPRESAS*/
 
