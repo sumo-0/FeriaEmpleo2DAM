@@ -1,44 +1,34 @@
 // Variables globales
+// Mantenemos esta comprobación para proteger las páginas visualmente
 let isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
 
-// Objeto Auth para manejar la autenticación
+// URL de tu backend (Ruta relativa desde el HTML)
+const API_URL = 'backend/auth.php';
+
+// Objeto Auth para manejar el estado de la sesión en el navegador
 const Auth = {
-    // Obtener usuarios del localStorage
-    getUsers: function() {
-        try {
-            return JSON.parse(localStorage.getItem('users')) || {};
-        } catch {
-            return {};
-        }
-    },
-
-    // Guardar usuarios en localStorage
-    saveUser: function(username, password) {
-        const users = this.getUsers();
-        users[username] = password;
-        localStorage.setItem('users', JSON.stringify(users));
-    },
-
-    // Verificar credenciales
-    checkCredentials: function(username, password) {
-        const users = this.getUsers();
-        return users[username] === password;
-    },
-
-    // Marcar como autenticado
+    // Marcar como autenticado en el navegador (tras login exitoso en PHP)
     setAuthenticated: function(username) {
         localStorage.setItem('isAuthenticated', 'true');
         localStorage.setItem('currentUser', username);
         isAuthenticated = true;
     },
 
-    // Verificar si está autenticado
+    // Verificar si está autenticado (para protección de rutas en JS)
     isAuthenticated: function() {
         return localStorage.getItem('isAuthenticated') === 'true';
+    },
+
+    // Cerrar sesión
+    logout: function() {
+        localStorage.removeItem('isAuthenticated');
+        localStorage.removeItem('currentUser');
+        isAuthenticated = false;
+        window.location.href = 'index.html';
     }
 };
 
-// Funciones del modal
+// Funciones del modal (Visuales)
 function showLoginModal() {
     const modal = document.getElementById('loginModal');
     if (modal) {
@@ -79,14 +69,13 @@ function switchToRegister() {
 
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del menú hamburguesa
+    // --- LÓGICA DEL MENÚ HAMBURGUESA ---
     const barsMenu = document.getElementById('barsMenu');
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const line1 = document.querySelector('.line1__bars-menu');
     const line2 = document.querySelector('.line2__bars-menu');
     const line3 = document.querySelector('.line3__bars-menu');
 
-    // Configurar menú hamburguesa
     if (barsMenu && hamburgerMenu) {
         barsMenu.addEventListener('click', () => {
             hamburgerMenu.classList.toggle('active');
@@ -96,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Formulario de inicio de sesión
+    // --- LÓGICA DE LOGIN (CONECTADO A PHP) ---
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
@@ -104,17 +93,31 @@ document.addEventListener('DOMContentLoaded', function() {
             const username = document.getElementById('loginEmail').value;
             const password = document.getElementById('loginPassword').value;
 
-            if (Auth.checkCredentials(username, password)) {
-                Auth.setAuthenticated(username);
-                closeLoginModal();
-                window.location.href = 'empresas.html';
-            } else {
-                alert('Usuario o contraseña incorrectos');
-            }
+            // Petición al servidor
+            fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'login', username: username, password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Si PHP dice OK, guardamos estado local y redirigimos
+                    Auth.setAuthenticated(username);
+                    closeLoginModal();
+                    window.location.href = 'empresas.html';
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error de conexión con el servidor.');
+            });
         });
     }
 
-    // Formulario de registro
+    // --- LÓGICA DE REGISTRO (CONECTADO A PHP) ---
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
         registerForm.addEventListener('submit', function(e) {
@@ -128,30 +131,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            const users = Auth.getUsers();
-            if (users[username]) {
-                alert('El usuario ya existe');
-                return;
-            }
-
-            Auth.saveUser(username, password);
-            alert('Registro exitoso');
-            
-            const loginEmail = document.getElementById('loginEmail');
-            if (loginEmail) {
-                loginEmail.value = username;
-            }
-            switchToLogin();
+            // Petición al servidor
+            fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'register', username: username, password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Registro exitoso. Ahora inicia sesión.');
+                    
+                    // Rellenar email y cambiar pestaña
+                    const loginEmail = document.getElementById('loginEmail');
+                    if (loginEmail) loginEmail.value = username;
+                    switchToLogin();
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error de conexión con el servidor.');
+            });
         });
     }
 
-    // Proteger acceso a empresas.html
+    // --- PROTECCIÓN DE PÁGINA EMPRESAS ---
     if (window.location.pathname.includes('empresas.html') && !Auth.isAuthenticated()) {
         window.location.href = 'index.html';
         return;
     }
 
-    // Manejar clics en enlaces a empresas.html
+    // Manejar clics en enlaces a empresas.html para abrir modal si no está logueado
     document.querySelectorAll('a[href="empresas.html"]').forEach(link => {
         link.addEventListener('click', function(e) {
             if (!Auth.isAuthenticated()) {
@@ -161,14 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Cerrar modal al hacer clic fuera
+    // Cerrar modal al hacer clic fuera (y cerrar menú hamburguesa)
     window.addEventListener('click', function(e) {
         const modal = document.getElementById('loginModal');
         if (e.target === modal) {
             closeLoginModal();
         }
 
-        // Cerrar menú hamburguesa al hacer clic fuera
         if (hamburgerMenu && barsMenu && !barsMenu.contains(e.target) && !hamburgerMenu.contains(e.target)) {
             hamburgerMenu.classList.remove('active');
             line1?.classList.remove('activeline1__bars-menu');
@@ -177,17 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Botón de cerrar modal
+    // Botón de cerrar modal (la X)
     const closeButton = document.querySelector('.close');
     if (closeButton) {
         closeButton.addEventListener('click', closeLoginModal);
     }
 });
 
-// Función de cierre de sesión global
-window.logout = function() {
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('currentUser');
-    isAuthenticated = false;
-    window.location.href = 'index.html';
-};
+// Función de cierre de sesión global (disponible en el HTML)
+window.logout = Auth.logout;
