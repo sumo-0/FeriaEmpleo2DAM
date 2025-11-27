@@ -86,12 +86,11 @@ header {
   border-bottom: 2px solid #FFD700;
 }
 
-
-
 .logo img{
   width: 145%;
   height: 145%;
   margin-top: -20px;
+  margin-left: 20px;
 }
 
 .navbar {
@@ -126,6 +125,29 @@ header {
 .navbar ul li a:hover {
   background: #00337F;
   color: #FFD700;
+}
+
+/*Carrusel*/
+/*
+#seccion-carrusel p{
+  color: #00337F;
+}
+*/
+.carrusel-contenedor {
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 0 16px; 
+}
+
+.carousel-item img {
+    height: 650px; 
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px; 
+    }
 }
 
 .seccion-ganador{
@@ -390,7 +412,7 @@ header {
   color: #FFD700;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .navbar {
     display: none;
   }
@@ -409,6 +431,7 @@ header {
     background: #FFFFFF;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     border-bottom: none;
+    border-bottom: 2px solid #FFD700;
   }
 
   .logo {
@@ -439,7 +462,7 @@ header {
   }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1301px) {
   .navbar {
     display: flex;
   }
