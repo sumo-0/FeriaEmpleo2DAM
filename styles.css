@@ -128,11 +128,8 @@ header {
 }
 
 /*Carrusel*/
-/*
-#seccion-carrusel p{
-  color: #00337F;
-}
-*/
+
+
 .carrusel-contenedor {
   max-width: 900px; 
   margin: 40px auto;
